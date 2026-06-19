@@ -7,6 +7,9 @@
 
 <title>AutoSavari Nepal</title>
 
+<!-- 🔐 GOOGLE VERIFICATION (PASTE YOUR CODE HERE) -->
+<meta name="google-site-verification" content="PASTE_GOOGLE_CODE_HERE" />
+
 <style>
 
 *{
@@ -30,7 +33,6 @@ padding:18px 30px;
 background:#111827;
 position:sticky;
 top:0;
-z-index:10;
 }
 
 .logo{
@@ -42,7 +44,7 @@ color:#facc15;
 .menu a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:18px;
 }
 
 .menu a:hover{
@@ -50,60 +52,30 @@ color:#facc15;
 }
 
 .hero{
-
 height:90vh;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 text-align:center;
-
 background:
-
-linear-gradient(
-rgba(0,0,0,.45),
-rgba(0,0,0,.60)
-),
-
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),
 url("https://images.unsplash.com/photo-1595708684082-a173bb3a06c5");
-
 background-size:cover;
-
 background-position:center;
-
 }
 
 .hero h1{
 font-size:55px;
 }
 
-.hero p{
-margin-top:10px;
-}
-
 .btn{
-
 margin-top:20px;
-
 padding:14px 30px;
-
 background:#facc15;
-
 border:none;
-
 border-radius:10px;
-
-cursor:pointer;
-
 font-weight:bold;
-
-}
-
-.btn:hover{
-transform:scale(1.05);
+cursor:pointer;
 }
 
 section{
@@ -112,129 +84,75 @@ text-align:center;
 }
 
 .booking{
-
 max-width:520px;
-
 margin:auto;
-
 background:#111827;
-
 padding:30px;
-
 border-radius:16px;
-
 }
 
 input{
-
 width:100%;
-
 padding:14px;
-
 margin:10px 0;
-
 border:none;
-
 border-radius:10px;
-
 }
 
 .cards{
-
 display:flex;
-
 gap:20px;
-
 justify-content:center;
-
 flex-wrap:wrap;
-
 }
 
 .card{
-
 background:#111827;
-
 width:250px;
-
 padding:20px;
-
 border-radius:15px;
-
 transition:.3s;
-
 }
 
 .card:hover{
-
 transform:translateY(-8px);
-
 }
 
 .price{
-
 color:#facc15;
-
 font-size:20px;
-
 }
 
 #fare{
-
 margin-top:20px;
-
 font-size:22px;
-
 color:#facc15;
-
 }
 
 #history{
-
 display:flex;
-
 flex-wrap:wrap;
-
 gap:20px;
-
 justify-content:center;
-
 margin-top:30px;
-
 }
 
 .bookingCard{
-
 background:#111827;
-
 padding:20px;
-
 width:260px;
-
 border-radius:14px;
-
 }
 
 footer{
-
 padding:25px;
-
 background:#111827;
-
 text-align:center;
-
 }
 
 @media(max-width:768px){
-
-.menu{
-display:none;
-}
-
-.hero h1{
-font-size:36px;
-}
-
+.menu{display:none;}
+.hero h1{font-size:36px;}
 }
 
 </style>
@@ -250,17 +168,11 @@ AutoSavari 🚕
 </div>
 
 <div class="menu">
-
 <a href="#home">Home</a>
-
 <a href="#book">Book Ride</a>
-
 <a href="#rides">Services</a>
-
 <a href="#historySec">History</a>
-
 <a href="#contact">Contact</a>
-
 </div>
 
 </nav>
@@ -269,17 +181,11 @@ AutoSavari 🚕
 
 <div>
 
-<h1>
-Nepal Auto Booking
-</h1>
+<h1>Nepal Auto Booking</h1>
 
-<p>
-Cheap • Fast • Local Travel
-</p>
+<p>Cheap • Fast • Local Travel</p>
 
-<button
-class="btn"
-
+<button class="btn"
 onclick="document.getElementById('book').scrollIntoView()">
 
 Book Ride
@@ -292,34 +198,17 @@ Book Ride
 
 <section id="book">
 
-<h2>
-Book Auto
-</h2>
+<h2>Book Auto</h2>
 
 <div class="booking">
 
-<input
-id="name"
-placeholder="Your Name">
+<input id="name" placeholder="Your Name">
+<input id="phone" placeholder="Phone Number">
+<input id="pickup" placeholder="Pickup Location">
+<input id="drop" placeholder="Drop Location">
 
-<input
-id="phone"
-placeholder="Phone Number">
-
-<input
-id="pickup"
-placeholder="Pickup Location">
-
-<input
-id="drop"
-placeholder="Drop Location">
-
-<button
-class="btn"
-onclick="bookRide()">
-
+<button class="btn" onclick="bookRide()">
 Confirm Booking
-
 </button>
 
 <p id="fare"></p>
@@ -330,58 +219,26 @@ Confirm Booking
 
 <section id="rides">
 
-<h2>
-Available Auto Services
-</h2>
+<h2>Available Rides</h2>
 
 <div class="cards">
 
 <div class="card">
-
-<h3>
-🛺 City Auto
-</h3>
-
-<p>
-Daily Ride
-</p>
-
-<p class="price">
-₹15/km
-</p>
-
+<h3>🛺 City Auto</h3>
+<p>Daily Ride</p>
+<p class="price">₹15/km</p>
 </div>
 
 <div class="card">
-
-<h3>
-🛺 Market Ride
-</h3>
-
-<p>
-Shopping
-</p>
-
-<p class="price">
-₹20/km
-</p>
-
+<h3>🛺 Market Ride</h3>
+<p>Shopping</p>
+<p class="price">₹20/km</p>
 </div>
 
 <div class="card">
-
-<h3>
-🛺 Night Ride
-</h3>
-
-<p>
-Safe Travel
-</p>
-
-<p class="price">
-₹25/km
-</p>
-
+<h3>🛺 Night Ride</h3>
+<p>Safe Travel</p>
+<p class="price">₹25/km</p>
 </div>
 
 </div>
@@ -390,9 +247,7 @@ Safe Travel
 
 <section id="historySec">
 
-<h2>
-Recent Bookings
-</h2>
+<h2>Recent Bookings</h2>
 
 <div id="history"></div>
 
@@ -400,128 +255,44 @@ Recent Bookings
 
 <section id="contact">
 
-<h2>
-Contact
-</h2>
+<h2>Contact</h2>
 
-<p>
-📞 9843615643
-</p>
-
-<p>
-AutoSavari Support
-</p>
+<p>📞 9843615643</p>
+<p>AutoSavari Support</p>
 
 </section>
 
 <footer>
-
 © 2026 AutoSavari Nepal
-
 </footer>
 
 <script>
 
 function bookRide(){
 
-let name=
-document.getElementById(
-"name"
-).value;
+let name=document.getElementById("name").value;
+let pickup=document.getElementById("pickup").value;
+let drop=document.getElementById("drop").value;
 
-let pickup=
-document.getElementById(
-"pickup"
-).value;
-
-let drop=
-document.getElementById(
-"drop"
-).value;
-
-if(
-name==""||
-pickup==""||
-drop==""
-){
-
-alert(
-"Fill all fields 🚕"
-);
-
+if(name==""||pickup==""||drop==""){
+alert("Fill all fields 🚕");
 return;
-
 }
 
-let fare=
+let fare=Math.floor(Math.random()*120)+50;
 
-Math.floor(
-Math.random()*120
-)+50;
+document.getElementById("fare").innerHTML =
+"💰 Estimated Fare ₹"+fare;
 
-document
-.getElementById(
-"fare"
-)
-
-.innerHTML=
-
-"💰 Estimated Fare ₹"
-
-+fare;
-
-document
-.getElementById(
-"history"
-)
-
-.innerHTML+=
-
-`
-
+document.getElementById("history").innerHTML += `
 <div class="bookingCard">
-
-🚕 ${name}
-
-<br><br>
-
-📍 ${pickup}
-
-→
-
-${drop}
-
-<br><br>
-
+🚕 ${name}<br><br>
+📍 ${pickup} → ${drop}<br><br>
 💰 ₹${fare}
-
 </div>
-
 `;
 
-document
-.getElementById(
-"name"
-).value="";
-
-document
-.getElementById(
-"phone"
-).value="";
-
-document
-.getElementById(
-"pickup"
-).value="";
-
-document
-.getElementById(
-"drop"
-).value="";
-
-alert(
-"Booking Confirmed 🚕"
-);
+alert("Booking Confirmed 🚕");
 
 }
 
